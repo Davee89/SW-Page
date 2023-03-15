@@ -1,5 +1,8 @@
 import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route } from 'react-router-dom';
 import Layout from './layout/Layout';
+import AboutMe from './pages/AboutMe';
+import Home from './pages/Home';
+import SingleFilmPage from './pages/SingleFilmPage';
 
 function App() {
   const router = createBrowserRouter(

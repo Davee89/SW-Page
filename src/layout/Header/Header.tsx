@@ -6,9 +6,9 @@ const Header = () => {
 
   return (
     <HeaderContainer>
-      <Logo onClick={() => navigate('/home')} src="/public/default-monochrome.svg" alt="logo" />
+      <Logo onClick={() => navigate('/')} src="/public/default-monochrome.svg" alt="logo" />
       <Nav>
-        <NavigationLink to="/home">Home</NavigationLink>
+        <NavigationLink to="/">Home</NavigationLink>
         <NavigationLink to="/about-me">About Me</NavigationLink>
       </Nav>
     </HeaderContainer>

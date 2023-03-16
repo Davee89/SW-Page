@@ -7,8 +7,8 @@ import SingleFilmPage from './pages/SingleFilmPage';
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="/" element={<Layout />}>
-        <Route path="home" element={<Home />} />
+      <Route element={<Layout />}>
+        <Route path="/" element={<Home />} />
         <Route path="about-me" element={<AboutMe />} />
         <Route path="movies/:id" element={<SingleFilmPage />} />
       </Route>,

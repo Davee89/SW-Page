@@ -2,8 +2,10 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const MainContent = styled.main`
+  margin: 0 auto;
   max-width: 1000px;
   min-height: 85vh;
+  position: relative;
 `;
 
 export const HeaderContainer = styled.header`
@@ -16,6 +18,7 @@ export const HeaderContainer = styled.header`
   justify-content: space-between;
   border: 1px brown solid;
   padding: 20px 60px;
+  z-index: 10;
 `;
 
 export const Logo = styled.img`
@@ -37,6 +40,9 @@ export const NavigationLink = styled(NavLink)`
   text-decoration: none;
   color: #bca593;
   :hover {
+    text-decoration: underline;
+  }
+  &.active {
     text-decoration: underline;
   }
 `;

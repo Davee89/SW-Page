@@ -1,13 +1,18 @@
 import styled, { css } from 'styled-components';
 
-export const Hero = styled.div`
-  width: 99.1vw;
+// ? Hero Section Styling
+
+export const Hero = styled.section`
+  position: relative;
   height: 100vh;
+  width: 100%;
   margin-top: 110px;
-  background-image: url('/public/bobafett.jpg');
-  background-repeat: no-repeat;
+  background: url('/public/bobafett.jpg');
+  background-position: 20%;
   background-size: cover;
-  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   display: flex;
   @media (max-width: 768px) {
     background-position: 20%;
@@ -48,3 +53,17 @@ export const Headliner = styled.h1`
 `;
 
 export const HeadlinerSpan = styled.span``;
+
+// ? Columns Section Styling
+
+export const ColumnSection = styled.section`
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 95vh;
+  background-color: #d0d1cb;
+`;
+
+export const ColumnContainer = styled.div`
+  justify-self: center;
+`;

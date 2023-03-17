@@ -1,12 +1,10 @@
-import useFetch from '../hooks/useFetch';
+import FilmList from '../components/FilmList/FilmList';
+import Section from '../components/Section/Section';
 
 const AboutMe = () => {
-  const { loading, error, filmsData } = useFetch('https://swapi.dev/api/films');
-
   return (
     <div>
-      <section>
-        <h1></h1>
+      <Section sectionTitle="Dawid Matras">
         <div>
           <p></p>
           <div>
@@ -21,21 +19,10 @@ const AboutMe = () => {
           <img src="" alt="" />
           <img src="" alt="" />
         </div>
-      </section>
-      <section>
-        <h2>Favorite Movies</h2>
-        <div>
-          {loading ? (
-            <p>Loading data...</p>
-          ) : error ? (
-            <p>{error}</p>
-          ) : filmsData && 'results' in filmsData ? (
-            filmsData.results.map(({ episode_id, title }) => <p key={episode_id}>{title}</p>)
-          ) : (
-            <p>No results found.</p>
-          )}
-        </div>
-      </section>
+      </Section>
+      <Section sectionTitle="Favorite Movies">
+        <FilmList />
+      </Section>
     </div>
   );
 };

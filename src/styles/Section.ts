@@ -9,7 +9,7 @@ export const SectionContainer = styled.section`
 `;
 
 export const SectionHeadliner = styled.h2`
-  margin: 0;
+  margin: 30px 0;
   width: 100%;
   text-align: center;
   letter-spacing: 10px;

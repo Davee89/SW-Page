@@ -10,13 +10,14 @@ export const MainContent = styled.main`
 
 export const HeaderContainer = styled.header`
   box-sizing: border-box;
-  background-color: white;
+  background-color: transparent;
   position: fixed;
+  backdrop-filter: blur(5px);
   top: 0;
   width: 100vw;
   display: flex;
   justify-content: space-between;
-  border: 1px brown solid;
+
   padding: 20px 60px;
   z-index: 10;
 `;
@@ -38,7 +39,8 @@ export const NavigationLink = styled(NavLink)`
   text-transform: uppercase;
   font-weight: 700;
   text-decoration: none;
-  color: #bca593;
+  color: rgba(187, 211, 255, 1);
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 1);
   :hover {
     text-decoration: underline;
   }
@@ -49,7 +51,7 @@ export const NavigationLink = styled(NavLink)`
 
 export const FooterContainer = styled.footer`
   padding: 10px;
-  border-top: 2px brown solid;
+  border-top: 2px rgba(187, 211, 255, 1) solid;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,4 +60,5 @@ export const FooterContainer = styled.footer`
 export const ShortParagraph = styled.p`
   letter-spacing: 2px;
   text-transform: uppercase;
+  color: rgba(187, 211, 255, 1);
 `;

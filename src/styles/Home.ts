@@ -3,12 +3,11 @@ import styled, { css } from 'styled-components';
 // ? Hero Section Styling
 
 export const Hero = styled.section`
-  position: relative;
   height: 100vh;
   width: 100%;
   margin-top: 110px;
-  background: url('/public/bobafett.jpg');
-  background-position: 20%;
+  background: url('/public/bobafett-bg.png');
+  background-position: 30%;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -21,16 +20,8 @@ export const Hero = styled.section`
 
 const ContainerCss = css`
   width: 50%;
+  height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-export const Container = styled.div`
-  ${ContainerCss}
-  @media (max-width: 768px) {
-    padding: 25%;
-  }
 `;
 
 export const EmptyContainer = styled.div`
@@ -42,10 +33,13 @@ export const EmptyContainer = styled.div`
 
 export const Headliner = styled.h1`
   font-size: 100px;
+  width: 100%;
   display: flex;
+  justify-content: start;
+  align-items: center;
   flex-direction: column;
   color: white;
-  text-shadow: 4px 4px 5px rgba(113, 66, 37, 0.89);
+  text-shadow: 4px 4px 5px rgba(255, 255, 255, 1);
 
   @media (max-width: 768px) {
     font-size: 60px;
@@ -57,13 +51,11 @@ export const HeadlinerSpan = styled.span``;
 // ? Columns Section Styling
 
 export const ColumnSection = styled.section`
+  margin-top: 50px;
   box-sizing: border-box;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  height: 95vh;
-  background-color: #d0d1cb;
-`;
-
-export const ColumnContainer = styled.div`
-  justify-self: center;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  height: 100vh;
+  background-color: transparent;
+  gap: 20px;
 `;

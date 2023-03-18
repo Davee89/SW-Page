@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-type Film = {
+export type Film = {
   release_date: string;
   director: string;
   opening_crawl: string;
@@ -9,15 +9,15 @@ type Film = {
   episode_id: number;
 };
 
-type FetchedData = {
+export type FetchedData = {
   count: number;
   next: null;
   previous: null;
   results: Film[];
 };
 
-const useFetch = (url: string, id?: number) => {
-  const [filmsData, setFilmsData] = useState<FetchedData | Film>();
+const useFetch = <T>(url: string, id?: string) => {
+  const [filmsData, setFilmsData] = useState<T>();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -29,6 +29,7 @@ const useFetch = (url: string, id?: number) => {
         const data = await res.json();
         setFilmsData(data);
         setLoading(false);
+        console.log(id, data);
       } catch (error) {
         setError((error as Error).message);
         setLoading(false);

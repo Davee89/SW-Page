@@ -1,4 +1,9 @@
-import { CrawlDownWrapper, CrawlUpWrapper, StarWarsTextContainer, TitleWrapper } from '../../styles/StarWarsVibe';
+import {
+  CrawlDownWrapper,
+  CrawlUpWrapper,
+  StarWarsTextContainer,
+  TitleWrapper,
+} from '../../styles/StarWarsFallingText';
 
 type Props = {
   text: string;

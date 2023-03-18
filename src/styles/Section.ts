@@ -5,11 +5,10 @@ export const SectionContainer = styled.section`
   height: max-content;
   display: flex;
   flex-direction: column;
-  margin-top: 100px;
 `;
 
 export const SectionHeadliner = styled.h2`
-  margin: 30px 0;
+  margin: 80px 0 25px;
   width: 100%;
   text-align: center;
   letter-spacing: 10px;

@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from "styled-components";
 
 // ? Hero Section Styling
 
@@ -6,7 +6,7 @@ export const Hero = styled.section`
   height: 100vh;
   width: 100%;
   margin-top: 110px;
-  background: url('/public/bobafett-bg.png');
+  background: url("/public/bobafett-bg.png");
   background-position: 30%;
   background-size: cover;
   -webkit-background-size: cover;
@@ -57,5 +57,5 @@ export const ColumnSection = styled.section`
   grid-template-columns: repeat(3, minmax(300px, 1fr));
   height: 100vh;
   background-color: transparent;
-  gap: 20px;
+  gap: 10px;
 `;

@@ -3,21 +3,61 @@ import {
   CrawlUpWrapper,
   StarWarsTextContainer,
   TitleWrapper,
-} from '../../styles/StarWarsFallingText';
+} from "../../styles/StarWarsFallingText";
 
-type Props = {
-  text: string;
-};
+const fallingText = [
+  "A long time ago",
+  "in a galaxy far, far away...",
+  "In the world of React,",
+  "there are two sides to the force:",
+  "the Light Side and the Dark Side.",
+  "On the Dark Side, developers",
+  "seek greater control",
+  "over their applications,",
+  "using complex hooks",
+  "and libraries",
+  "to bend the code to their will.",
+  "On the Light Side,",
+  "developers favor simplicity",
+  "and elegance,",
+  "using intuitive hooks and libraries",
+  "to create user-friendly applications.",
+  "However, like the Jedi",
+  "and the Sith,",
+  "both sides have their strengths",
+  "and weaknesses.",
+  "The Dark Side offers powerful tools",
+  "for skilled developers,",
+  "but can lead to convoluted code",
+  "that is difficult to maintain.",
+  "The Light Side,",
+  "while easier to use,",
+  "may lack the precision",
+  "necessary for more complex applications",
+  "Ultimately,",
+  "the choice of which side to follow",
+  "depends on the specific needs",
+  "of the application",
+  "and the skills",
+  "of the development team.",
+  "Whether you choose",
+  "to embrace the Dark Side",
+  "or the Light Side of React,",
+  "May the force be with you",
+];
+const textBackwards = fallingText.reverse();
 
-const StarWarsFallingText = ({ text }: Props) => {
+const StarWarsFallingText = () => {
   return (
     <StarWarsTextContainer>
       <CrawlDownWrapper>
         <TitleWrapper>
-          <p>{text}</p>
+          {textBackwards.map((text) => (
+            <p>{text.replace(text[0], text[0].toUpperCase())}</p>
+          ))}
         </TitleWrapper>
       </CrawlDownWrapper>
-      <CrawlUpWrapper>{text}</CrawlUpWrapper>
+      <CrawlUpWrapper>{fallingText.reverse().join(" ")}</CrawlUpWrapper>
     </StarWarsTextContainer>
   );
 };

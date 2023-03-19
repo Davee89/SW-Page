@@ -1,10 +1,12 @@
-import { NavLink } from 'react-router-dom';
-import styled from 'styled-components';
+import { NavLink } from "react-router-dom";
+import styled from "styled-components";
 
 export const MainContent = styled.main`
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
   max-width: 1000px;
-  min-height: 85vh;
+  min-height: 95vh;
   position: relative;
 `;
 

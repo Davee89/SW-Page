@@ -1,8 +1,8 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from "styled-components";
 
 const crawlDownAnimation = keyframes`
   0% {
-    transform: translateY(-200%);
+    transform: translateY(-125%);
   }
   99% {
     transform: translateY(100%);
@@ -14,7 +14,7 @@ const crawlDownAnimation = keyframes`
 
 const crawlUpAnimation = keyframes`
   0% {
-    transform: translateY(400%);
+    transform: translateY(200%);
     opacity: 0.4;
   }
   99% {
@@ -33,6 +33,8 @@ export const StarWarsTextContainer = styled.div`
   height: 100%;
   background-color: transparent;
   overflow: hidden;
+  border-radius: 50px;
+  padding-top: 30px;
 `;
 
 export const CrawlDownWrapper = styled.div`
@@ -41,20 +43,25 @@ export const CrawlDownWrapper = styled.div`
   transform: translateY(-50%);
   width: 100%;
   height: auto;
-  animation: ${crawlDownAnimation} 30s linear forwards;
+  padding: 0;
+  animation: ${crawlDownAnimation} 240s linear forwards;
   color: rgba(255, 255, 255, 1);
+  text-shadow: 4px 4px 5px rgba(187, 211, 255, 1);
+  line-height: 6;
 `;
 
 export const TitleWrapper = styled.div`
-  font-size: 2.5rem;
+  font-size: 1.3rem;
   text-align: center;
   margin-bottom: 1rem;
+  font-weight: 900;
+  color: white;
 `;
 
 export const CrawlUpWrapper = styled.p`
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   text-align: justify;
   white-space: pre-line;
-  animation: ${crawlUpAnimation} 30s alternate forwards;
+  animation: ${crawlUpAnimation} 200s alternate forwards;
   color: rgba(255, 255, 255, 1);
 `;

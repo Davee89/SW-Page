@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 interface DarkProps {
   dark?: boolean;
@@ -6,18 +6,20 @@ interface DarkProps {
 
 export const ColumnWrapper = styled.div`
   justify-self: center;
-  border: 1px solid;
-  padding: 10px;
+  padding: 20px;
 `;
 
 export const ColumnHeadliner = styled.h2<DarkProps>`
   text-align: center;
+  font-size: 30px;
   letter-spacing: 5px;
-  color: ${({ dark }) => (dark ? 'red' : 'lightblue')};
+  margin-bottom: 20px;
+  color: ${({ dark }) => (dark ? "red" : "lightblue")};
 `;
 
 export const ColumnText = styled.p<DarkProps>`
   text-align: justify;
-  font-size: 20px;
-  letter-spacing: 2px;
+  line-height: 1.6;
+  font-size: 18px;
+  letter-spacing: 1px;
 `;

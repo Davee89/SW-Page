@@ -1,8 +1,8 @@
-import useFetch, { FetchedData } from '../../hooks/useFetch';
-import { FilmLink, FilmsContainer, Message } from '../../styles/FilmList';
+import useFetch, { FetchedData } from "../../hooks/useFetch";
+import { FilmLink, FilmsContainer, Message } from "../../styles/FilmList";
 
 const FilmList = () => {
-  const { loading, error, filmsData } = useFetch<FetchedData>('https://swapi.dev/api/films');
+  const { loading, error, filmsData } = useFetch<FetchedData>("https://swapi.dev/api/films");
 
   return (
     <FilmsContainer>
@@ -10,7 +10,7 @@ const FilmList = () => {
         <Message>Loading data...</Message>
       ) : error ? (
         <Message error>{error}</Message>
-      ) : filmsData && 'results' in filmsData ? (
+      ) : filmsData && "results" in filmsData ? (
         filmsData.results.map(({ episode_id, title }) => (
           <FilmLink key={episode_id} to={`/movies/${episode_id}`}>
             {title}

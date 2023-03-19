@@ -29,7 +29,6 @@ const useFetch = <T>(url: string, id?: string) => {
         const data = await res.json();
         setFilmsData(data);
         setLoading(false);
-        console.log(id, data);
       } catch (error) {
         setError((error as Error).message);
         setLoading(false);

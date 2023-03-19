@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components";
+import { Theme } from "../theme/theme";
 
 const crawlDownAnimation = keyframes`
   0% {
@@ -45,8 +46,8 @@ export const CrawlDownWrapper = styled.div`
   height: auto;
   padding: 0;
   animation: ${crawlDownAnimation} 240s linear forwards;
-  color: rgba(255, 255, 255, 1);
-  text-shadow: 4px 4px 5px rgba(187, 211, 255, 1);
+  color: ${({ theme }: { theme: Theme }) => theme.secondaryTextColor};
+  text-shadow: 4px 4px 5px ${({ theme }: { theme: Theme }) => theme.textColor};
   line-height: 6;
 `;
 
@@ -63,5 +64,5 @@ export const CrawlUpWrapper = styled.p`
   text-align: justify;
   white-space: pre-line;
   animation: ${crawlUpAnimation} 200s alternate forwards;
-  color: rgba(255, 255, 255, 1);
+  color: ${({ theme }: { theme: Theme }) => theme.secondaryTextColor};
 `;

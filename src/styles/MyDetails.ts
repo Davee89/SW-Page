@@ -1,4 +1,5 @@
-import styled, { css, keyframes } from 'styled-components';
+import styled, { css, keyframes } from "styled-components";
+import { Theme } from "../theme/theme";
 
 interface Picture {
   circle?: boolean;
@@ -77,10 +78,10 @@ export const Picture = styled.img<Picture>`
   width: 100%;
   height: 100%;
   object-fit: contain;
-  box-shadow: 0px 5px 20px rgba(187, 211, 255, 1);
+  box-shadow: 0px 5px 20px ${({ theme }: { theme: Theme }) => theme.textColor};
   animation: ${showUp} 2s linear;
   transition: transform 0.2s ease-out;
-  border-radius: ${({ circle }) => (circle ? '50%' : '5%')};
+  border-radius: ${({ circle }) => (circle ? "50%" : "5%")};
   &:hover {
     transform: scale(1.05);
   }

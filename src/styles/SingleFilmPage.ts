@@ -1,7 +1,15 @@
 import styled from "styled-components";
+import { Theme } from "../theme/theme";
+
+export const Wrapper = styled.div`
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+`;
 
 export const SingleFilmWrapper = styled.div`
-  margin: auto;
+  margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,7 +17,7 @@ export const SingleFilmWrapper = styled.div`
   border-radius: 20px;
   padding: 25px;
   min-height: 40vh;
-  box-shadow: 0px 0px 5px 0px rgba(187, 211, 255, 1);
+  box-shadow: 0px 0px 5px 0px ${({ theme }: { theme: Theme }) => theme.textColor};
   background-color: white;
 `;
 
@@ -53,4 +61,20 @@ export const Field = styled.p`
 
 export const Paragraph = styled.p`
   text-align: justify;
+`;
+export const LinkBack = styled.button`
+  align-self: center;
+  text-decoration: none;
+  font-weight: 900;
+  color: black;
+  text-transform: uppercase;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 0.5s;
+  border: ${({ theme }: { theme: Theme }) => theme.textColor} solid 1px;
+  :hover {
+    background-color: ${({ theme }: { theme: Theme }) => theme.textColor};
+    color: white;
+  }
 `;

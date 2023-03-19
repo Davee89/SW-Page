@@ -45,17 +45,14 @@ const fallingText = [
   "or the Light Side of React,",
   "May the force be with you",
 ];
-const textBackwards = fallingText.reverse();
 
 const StarWarsFallingText = () => {
+  const textBackwards = fallingText.reverse().map((text) => <p>{text.replace(text[0], text[0].toUpperCase())}</p>);
+
   return (
     <StarWarsTextContainer>
       <CrawlDownWrapper>
-        <TitleWrapper>
-          {textBackwards.map((text) => (
-            <p>{text.replace(text[0], text[0].toUpperCase())}</p>
-          ))}
-        </TitleWrapper>
+        <TitleWrapper>{textBackwards}</TitleWrapper>
       </CrawlDownWrapper>
       <CrawlUpWrapper>{fallingText.reverse().join(" ")}</CrawlUpWrapper>
     </StarWarsTextContainer>

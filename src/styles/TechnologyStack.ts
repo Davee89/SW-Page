@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled from "styled-components";
+import { Theme } from "../theme/theme";
 
 export const SingleTechnology = styled.div`
   position: relative;
@@ -8,8 +9,8 @@ export const SingleTechnology = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.6);
-  box-shadow: 0px 5px 20px rgba(187, 211, 255, 1);
+  background-color: ${({ theme }: { theme: Theme }) => theme.secondaryTextColor};
+  box-shadow: 0px 5px 20px ${({ theme }: { theme: Theme }) => theme.textColor};
   transition: 0.5s;
   :hover {
     transform: scale(0.95);

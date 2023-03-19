@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import useFetch, { Film } from "../hooks/useFetch";
 import { Message } from "../styles/FilmList";
 import {
@@ -10,6 +10,8 @@ import {
   Subtitle,
   Title,
   SmallSection,
+  LinkBack,
+  Wrapper,
 } from "../styles/SingleFilmPage";
 
 interface ApiFixingTable {
@@ -20,9 +22,10 @@ const SingleFilmPage = () => {
   const { id } = useParams();
   const apiFixingTable: ApiFixingTable = { 1: "4", 2: "5", 3: "6", 4: "1", 5: "2", 6: "3" };
   const { loading, error, filmsData } = useFetch<Film>("https://swapi.dev/api/films", id && apiFixingTable[id]);
-
+  const navigate = useNavigate();
   return (
-    <>
+    <Wrapper>
+      <LinkBack onClick={() => navigate(-1)}>Go back</LinkBack>
       {loading ? (
         <Message>Loading data...</Message>
       ) : error ? (
@@ -49,7 +52,7 @@ const SingleFilmPage = () => {
           </FilmSectionWrapper>
         </SingleFilmWrapper>
       )}
-    </>
+    </Wrapper>
   );
 };
 

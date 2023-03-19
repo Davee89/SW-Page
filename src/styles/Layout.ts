@@ -1,13 +1,13 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import { Theme } from "../theme/theme";
 
 export const MainContent = styled.main`
-  margin: 0 auto;
+  margin: auto;
   display: flex;
   flex-direction: column;
   max-width: 1000px;
   min-height: 95vh;
-  position: relative;
 `;
 
 export const HeaderContainer = styled.header`
@@ -18,8 +18,8 @@ export const HeaderContainer = styled.header`
   top: 0;
   width: 100vw;
   display: flex;
-  justify-content: space-between;
-
+  justify-content: space-around;
+  align-items: center;
   padding: 20px 60px;
   z-index: 10;
 `;
@@ -41,10 +41,10 @@ export const NavigationLink = styled(NavLink)`
   text-transform: uppercase;
   font-weight: 700;
   text-decoration: none;
-  color: rgba(187, 211, 255, 1);
-  text-shadow: 1px 1px 2px rgba(255, 255, 255, 1);
+  color: ${({ theme }: { theme: Theme }) => theme.textColor};
+
   :hover {
-    text-decoration: underline;
+    opacity: 0.5;
   }
   &.active {
     text-decoration: underline;
@@ -53,7 +53,7 @@ export const NavigationLink = styled(NavLink)`
 
 export const FooterContainer = styled.footer`
   padding: 10px;
-  border-top: 2px rgba(187, 211, 255, 1) solid;
+  border-top: 2px ${({ theme }: { theme: Theme }) => theme.textColor} solid;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,5 +62,5 @@ export const FooterContainer = styled.footer`
 export const ShortParagraph = styled.p`
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: rgba(187, 211, 255, 1);
+  color: ${({ theme }: { theme: Theme }) => theme.textColor};
 `;

@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { Theme } from "../theme/theme";
 
 // ? Hero Section Styling
 
@@ -13,6 +14,7 @@ export const Hero = styled.section`
   -moz-background-size: cover;
   -o-background-size: cover;
   display: flex;
+  justify-content: center;
   @media (max-width: 768px) {
     background-position: 20%;
   }
@@ -33,25 +35,33 @@ export const EmptyContainer = styled.div`
 
 export const Headliner = styled.h1`
   font-size: 100px;
-  width: 100%;
   display: flex;
-  justify-content: start;
-  align-items: center;
+  align-items: flex-end;
+  padding: 20px;
+  align-self: center;
   flex-direction: column;
+  justify-content: start;
   color: white;
-  text-shadow: 4px 4px 5px rgba(255, 255, 255, 1);
-
+  border-width: 4px;
+  border-style: solid;
+  border-image: linear-gradient(
+      to right top,
+      ${({ theme }: { theme: Theme }) => theme.textColor} 0%,
+      transparent 20%,
+      transparent 80%,
+      ${({ theme }: { theme: Theme }) => theme.textColor} 100%
+    )
+    1;
+  text-shadow: 4px 4px 5px ${({ theme }: { theme: Theme }) => theme.textColor};
   @media (max-width: 768px) {
     font-size: 60px;
   }
 `;
 
-export const HeadlinerSpan = styled.span``;
-
 // ? Columns Section Styling
 
 export const ColumnSection = styled.section`
-  margin-top: 50px;
+  margin: 50px 0;
   box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(3, minmax(300px, 1fr));

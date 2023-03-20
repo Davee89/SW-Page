@@ -36,6 +36,10 @@ export const StarWarsTextContainer = styled.div`
   overflow: hidden;
   border-radius: 50px;
   padding: 30px 10px 0;
+
+  @media (max-width: 920px) {
+    min-height: max-content;
+  }
 `;
 
 export const CrawlDownWrapper = styled.div`

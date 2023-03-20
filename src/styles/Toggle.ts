@@ -61,9 +61,9 @@ export const ToggleButton = styled.button<ToggleProps>`
     transition: 0.2s linear;
 
     @media (max-width: 600px) {
-      width: 15px;
-      height: 15px;
-      left: ${({ active }) => (active ? '20px' : '5px')};
+      width: 12px;
+      height: 12px;
+      left: ${({ active }) => (active ? '23px' : '5px')};
     }
   }
 `;

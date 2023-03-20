@@ -38,7 +38,7 @@ export const StarWarsTextContainer = styled.div`
   padding: 30px 10px 0;
 
   @media (max-width: 920px) {
-    min-height: 30%;
+    min-height: 800px;
   }
 `;
 

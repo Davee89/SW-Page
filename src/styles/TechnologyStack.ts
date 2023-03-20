@@ -10,8 +10,9 @@ export const SingleTechnology = styled.div`
   justify-content: center;
   align-items: center;
   background-color: ${({ theme }: { theme: Theme }) => theme.secondaryTextColor};
-  box-shadow: 0px 5px 20px ${({ theme }: { theme: Theme }) => theme.textColor};
+  box-shadow: 0px 5px 20px ${({ theme }: { theme: Theme }) => theme.textColorOpacity};
   transition: 0.5s;
+
   :hover {
     transform: scale(0.95);
     > div {

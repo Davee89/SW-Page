@@ -37,6 +37,9 @@ export const ToggleButton = styled.button<ToggleProps>`
   transition: 0.2s linear;
   border: 0;
   box-shadow: 0px 0px 2px 1px ${({ theme }: { theme: Theme }) => theme.textColor};
+  :hover {
+    box-shadow: inset 0px 0px 2px 1px rgba(1, 1, 1, 0.3);
+  }
 
   @media (max-width: 600px) {
     width: 40px;
@@ -61,10 +64,6 @@ export const ToggleButton = styled.button<ToggleProps>`
       width: 15px;
       height: 15px;
       left: ${({ active }) => (active ? '20px' : '5px')};
-    }
-
-    &:hover {
-      opacity: 1;
     }
   }
 `;

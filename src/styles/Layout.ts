@@ -82,6 +82,7 @@ export const NavigationLink = styled(NavLink)`
   :hover {
     opacity: 0.5;
   }
+
   &.active {
     text-decoration: underline;
   }
@@ -98,6 +99,7 @@ export const FooterContainer = styled.footer`
 
 export const ShortParagraph = styled.p`
   letter-spacing: 2px;
+  text-align: center;
   text-transform: uppercase;
   color: ${({ theme }: { theme: Theme }) => theme.textColor};
 `;

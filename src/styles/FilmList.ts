@@ -43,8 +43,9 @@ export const FilmLink = styled(Link)`
   animation: ${fadeIn} 1.5s linear;
   -webkit-box-shadow: 0px 0px 20px 5px ${({ theme }: { theme: Theme }) => theme.textColor};
   -moz-box-shadow: 0px 0px 20px 5px ${({ theme }: { theme: Theme }) => theme.textColor};
-  box-shadow: 0px 0px 10px 5px ${({ theme }: { theme: Theme }) => theme.textColor};
+  box-shadow: 0px 0px 10px 5px ${({ theme }: { theme: Theme }) => theme.textColorOpacity};
   transition: 0.5s;
+  color: ${({ theme }: { theme: Theme }) => theme.textColor};
 
   :hover {
     background-color: ${({ theme }: { theme: Theme }) => theme.textColor};

@@ -5,7 +5,7 @@ export const Hero = styled.section`
   height: 100vh;
   width: 100%;
   margin-top: 110px;
-  background: url('/public/bobafett-bg.webp');
+  background: url('/bobafett-bg.webp');
   background-position: 30%;
   background-size: cover;
   -webkit-background-size: cover;

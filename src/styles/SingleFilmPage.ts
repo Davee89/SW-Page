@@ -21,7 +21,7 @@ export const SingleFilmWrapper = styled.div`
   border-radius: 20px;
   padding: 25px;
   min-height: 40vh;
-  box-shadow: 0px 0px 5px 0px ${({ theme }: { theme: Theme }) => theme.textColor};
+  box-shadow: 0px 0px 5px 2px ${({ theme }: { theme: Theme }) => theme.textColorOpacity};
   background-color: white;
 `;
 
@@ -45,6 +45,7 @@ export const FilmSectionWrapper = styled.div`
   display: flex;
   gap: 25px;
   margin-top: 50px;
+
   @media (max-width: 550px) {
     flex-wrap: wrap;
     justify-content: center;
@@ -66,6 +67,7 @@ export const Field = styled.p`
 export const Paragraph = styled.p`
   text-align: justify;
 `;
+
 export const LinkBack = styled.button`
   align-self: center;
   text-decoration: none;
@@ -77,6 +79,7 @@ export const LinkBack = styled.button`
   border-radius: 10px;
   transition: 0.5s;
   border: ${({ theme }: { theme: Theme }) => theme.textColor} solid 1px;
+
   :hover {
     background-color: ${({ theme }: { theme: Theme }) => theme.textColor};
     color: white;

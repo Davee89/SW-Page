@@ -12,11 +12,7 @@ const Header = () => {
 
   return (
     <HeaderContainer isOpen={isOpen}>
-      <Logo
-        onClick={() => navigate('/')}
-        src={darkSide ? '/public/padawan-dark.svg' : '/public/padawan.svg'}
-        alt="logo"
-      />
+      <Logo onClick={() => navigate('/')} src={darkSide ? '/padawan-dark.svg' : '/padawan.svg'} alt="logo" />
       <Toggle />
       <Hamburger isOpen={isOpen} onClick={setIsOpen} />
       <Nav isOpen={isOpen}>

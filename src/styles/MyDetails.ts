@@ -33,6 +33,7 @@ export const DetailsWrapper = styled.div`
 
 const PictureWrapper = css`
   position: relative;
+
   @media (max-width: 1000px) {
     padding: 20px;
   }
@@ -43,6 +44,7 @@ export const PictureWrapperTop = styled.div`
   grid-column: 1/2;
   grid-row: 1/2;
   border-radius: 50%;
+
   @media (max-width: 1000px) {
     max-width: 400px;
     justify-self: center;
@@ -100,10 +102,11 @@ export const Picture = styled.img<Picture>`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  box-shadow: 0px 5px 20px ${({ theme }: { theme: Theme }) => theme.textColor};
+  box-shadow: 0px 5px 20px ${({ theme }: { theme: Theme }) => theme.textColorOpacity};
   animation: ${showUp} 2s linear;
   transition: transform 0.2s ease-out;
   border-radius: ${({ circle }) => (circle ? '50%' : '5%')};
+
   &:hover {
     transform: scale(1.05);
   }

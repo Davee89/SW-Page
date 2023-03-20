@@ -8,9 +8,9 @@ const Toggle = () => {
 
   return (
     <ToggleWrapper>
-      <Image src={'/public/lightsaber-light.webp'} alt="light mode icon" />
+      <Image src={'/lightsaber-light.webp'} alt="light mode icon" />
       <ToggleButton data-testid="toggle" onClick={toggleTheme} active={theme === darkTheme} />
-      <Image src={'/public/lightsaber.webp'} alt="dark mode icon" />
+      <Image src={'/lightsaber.webp'} alt="dark mode icon" />
     </ToggleWrapper>
   );
 };

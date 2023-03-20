@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
-import styled from "styled-components";
-import { Theme } from "../theme/theme";
-import { fadeIn } from "./AnimatedHeader";
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import { Theme } from '../theme/theme';
+import { fadeIn } from './AnimatedHeader';
 
 interface MessageProps {
   error?: boolean;
@@ -11,9 +11,13 @@ export const FilmsContainer = styled.div`
   width: 100%;
   height: max-content;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 20px;
-  margin: 25px;
+  padding: 20px;
+
+  @media (max-width: 500px) {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
 `;
 
 export const Message = styled.p<MessageProps>`
@@ -21,7 +25,7 @@ export const Message = styled.p<MessageProps>`
   padding: 50px;
   letter-spacing: 2px;
   margin: auto;
-  color: ${({ error }) => (error ? "red" : "black")};
+  color: ${({ error }) => (error ? 'red' : 'black')};
   grid-column: 1/3;
   text-align: center;
   font-size: 20px;
@@ -33,7 +37,6 @@ export const FilmLink = styled(Link)`
   margin: 0;
   border: 1px solid ${({ theme }: { theme: Theme }) => theme.textColor};
   border-radius: 25%;
-  min-width: 250px;
   text-align: center;
   flex-grow: 1;
   font-size: 20px;

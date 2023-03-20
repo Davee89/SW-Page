@@ -1,11 +1,15 @@
-import styled from "styled-components";
-import { Theme } from "../theme/theme";
+import styled from 'styled-components';
+import { Theme } from '../theme/theme';
 
 export const Wrapper = styled.div`
-  margin: auto;
+  margin: auto 20px;
   display: flex;
   flex-direction: column;
   gap: 25px;
+
+  @media (max-width: 400px) {
+    margin: 80px 20px;
+  }
 `;
 
 export const SingleFilmWrapper = styled.div`
@@ -41,7 +45,7 @@ export const FilmSectionWrapper = styled.div`
   display: flex;
   gap: 25px;
   margin-top: 50px;
-  @media (max-width: 500px) {
+  @media (max-width: 550px) {
     flex-wrap: wrap;
     justify-content: center;
   }

@@ -11,7 +11,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <HeaderContainer>
+    <HeaderContainer isOpen={isOpen}>
       <Logo
         onClick={() => navigate('/')}
         src={darkSide ? '/public/padawan-dark.svg' : '/public/padawan.svg'}

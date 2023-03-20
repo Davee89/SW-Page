@@ -2,6 +2,10 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { Theme } from '../theme/theme';
 
+interface Menu {
+  isOpen: boolean;
+}
+
 export const MainContent = styled.main`
   margin: auto;
   display: flex;
@@ -10,11 +14,11 @@ export const MainContent = styled.main`
   min-height: 95vh;
 `;
 
-export const HeaderContainer = styled.header`
+export const HeaderContainer = styled.header<Menu>`
   box-sizing: border-box;
-  background-color: transparent;
+  background-color: ${({ theme }: { theme: Theme }) => theme.textColorOpacity};
   position: fixed;
-  backdrop-filter: blur(5px);
+  backdrop-filter: ${({ isOpen }) => (isOpen ? 'unset' : 'blur(5px)')};
   top: 0;
   width: 100vw;
   display: flex;
@@ -22,15 +26,25 @@ export const HeaderContainer = styled.header`
   align-items: center;
   padding: 20px 60px;
   z-index: 10;
+
+  @media (max-width: 600px) {
+    padding: 20px;
+    justify-content: space-around;
+  }
 `;
 
 export const Logo = styled.img`
   max-width: 200px;
   max-height: 200px;
   cursor: pointer;
+
+  @media (max-width: 600px) {
+    max-width: 100px;
+    max-height: 100px;
+  }
 `;
 
-export const Nav = styled.div<{ isOpen: boolean }>`
+export const Nav = styled.div<Menu>`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -51,8 +65,8 @@ export const Nav = styled.div<{ isOpen: boolean }>`
     left: -100%;
     transform: ${({ isOpen }) => (isOpen ? 'translateX(100%)' : 'translateX(-100%)')};
     z-index: 30;
-    background-color: ${({ isOpen }) => (isOpen ? 'rgba(0,0,0,0.6)' : 'transparent')};
-    backdrop-filter: blur(5px);
+    background-color: ${({ isOpen }) => (isOpen ? 'rgba(0,0,0,0.7)' : 'transparent')};
+    backdrop-filter: blur(10px);
     padding: 140px 0;
     transition: all 0.5s ease-in-out;
   }
@@ -79,6 +93,7 @@ export const FooterContainer = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 50px;
 `;
 
 export const ShortParagraph = styled.p`

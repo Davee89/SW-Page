@@ -3,7 +3,7 @@ import { Theme } from '../theme/theme';
 
 const crawlDownAnimation = keyframes`
   0% {
-    transform: translateY(-125%);
+    transform: translateY(-115%);
   }
   99% {
     transform: translateY(100%);
@@ -35,7 +35,7 @@ export const StarWarsTextContainer = styled.div`
   background-color: transparent;
   overflow: hidden;
   border-radius: 50px;
-  padding-top: 30px;
+  padding: 30px 10px 0;
 `;
 
 export const CrawlDownWrapper = styled.div`

@@ -12,7 +12,7 @@ const MyDetails = () => {
   return (
     <DetailsWrapper>
       <PictureWrapperTop>
-        <Picture circle src="/public/me.png" />
+        <Picture circle src="/public/me.webp" />
       </PictureWrapperTop>
       <ParagraphWrapper>
         <AboutMeParagraph>
@@ -24,10 +24,10 @@ const MyDetails = () => {
         </AboutMeParagraph>
       </ParagraphWrapper>
       <PictureWrapperBottomLeft>
-        <Picture src="/public/bobafett-bg.png" />
+        <Picture src="/public/photo-1.webp" />
       </PictureWrapperBottomLeft>
       <PictureWrapperBottomRight>
-        <Picture src="/public/bobafett-bg.png" />
+        <Picture src="/public/photo-2.webp" />
       </PictureWrapperBottomRight>
     </DetailsWrapper>
   );

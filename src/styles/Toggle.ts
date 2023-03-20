@@ -11,11 +11,21 @@ export const ToggleWrapper = styled.div`
   align-items: center;
   gap: 15px;
   margin-left: 30px;
+
+  @media (max-width: 600px) {
+    gap: 5px;
+    margin-left: 10px;
+  }
 `;
 
 export const Image = styled.img`
   width: 32px;
   height: 32px;
+
+  @media (max-width: 600px) {
+    width: 20px;
+    height: 20px;
+  }
 `;
 
 export const ToggleButton = styled.button<ToggleProps>`
@@ -27,6 +37,11 @@ export const ToggleButton = styled.button<ToggleProps>`
   transition: 0.2s linear;
   border: 0;
   box-shadow: 0px 0px 2px 1px ${({ theme }: { theme: Theme }) => theme.textColor};
+
+  @media (max-width: 600px) {
+    width: 40px;
+    height: 20px;
+  }
 
   &::before {
     content: '';
@@ -41,6 +56,13 @@ export const ToggleButton = styled.button<ToggleProps>`
     left: ${({ active }) => (active ? '30px' : '5px')};
     transform: translateY(-50%);
     transition: 0.2s linear;
+
+    @media (max-width: 600px) {
+      width: 15px;
+      height: 15px;
+      left: ${({ active }) => (active ? '20px' : '5px')};
+    }
+
     &:hover {
       opacity: 1;
     }

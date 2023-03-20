@@ -20,12 +20,12 @@ transform: scale(0.7);
 export const DetailsWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1.5fr;
   grid-gap: 30px;
   max-width: 1000px;
   margin: 0 auto;
 
-  @media screen and (max-width: 768px) {
+  @media (max-width: 1000px) {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
   }
@@ -33,25 +33,42 @@ export const DetailsWrapper = styled.div`
 
 const PictureWrapper = css`
   position: relative;
+  @media (max-width: 1000px) {
+    padding: 20px;
+  }
 `;
 
 export const PictureWrapperTop = styled.div`
   ${PictureWrapper}
   grid-column: 1/2;
   grid-row: 1/2;
-  border-radius: 25px;
+  border-radius: 50%;
+  @media (max-width: 1000px) {
+    max-width: 400px;
+    justify-self: center;
+  }
 `;
 
 export const PictureWrapperBottomLeft = styled.div`
   ${PictureWrapper}
   grid-column: 1/3;
   grid-row: 2/3;
+
+  @media (max-width: 1000px) {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
 `;
 
 export const PictureWrapperBottomRight = styled.div`
   ${PictureWrapper}
   grid-column: 3/5;
   grid-row: 2/3;
+
+  @media (max-width: 1000px) {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
 `;
 
 export const ParagraphWrapper = styled.div`
@@ -59,9 +76,14 @@ export const ParagraphWrapper = styled.div`
   align-items: center;
   justify-content: center;
   background-color: transparent;
-  padding: 20px;
   grid-column: 2/5;
   grid-row: 1/2;
+  padding: 20px 0;
+
+  @media (max-width: 1000px) {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
 `;
 
 export const AboutMeParagraph = styled.p`
@@ -77,7 +99,7 @@ export const Picture = styled.img<Picture>`
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   box-shadow: 0px 5px 20px ${({ theme }: { theme: Theme }) => theme.textColor};
   animation: ${showUp} 2s linear;
   transition: transform 0.2s ease-out;
@@ -86,7 +108,8 @@ export const Picture = styled.img<Picture>`
     transform: scale(1.05);
   }
 
-  @media screen and (max-width: 768px) {
-    margin-bottom: 20px;
+  @media screen and (max-width: 1000px) {
+    object-fit: cover;
+    position: static;
   }
 `;

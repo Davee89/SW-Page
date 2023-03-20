@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Theme } from "../theme/theme";
+import styled from 'styled-components';
+import { Theme } from '../theme/theme';
 
 export const SingleTechnology = styled.div`
   position: relative;

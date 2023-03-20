@@ -1,5 +1,5 @@
-import styled, { keyframes } from "styled-components";
-import { Theme } from "../theme/theme";
+import styled, { keyframes } from 'styled-components';
+import { Theme } from '../theme/theme';
 
 const crawlDownAnimation = keyframes`
   0% {
@@ -63,6 +63,7 @@ export const CrawlUpWrapper = styled.p`
   font-size: 1.3rem;
   text-align: justify;
   white-space: pre-line;
+  line-height: 1.5;
   animation: ${crawlUpAnimation} 200s alternate forwards;
   color: ${({ theme }: { theme: Theme }) => theme.secondaryTextColor};
 `;

@@ -1,5 +1,5 @@
-import styled, { css, keyframes } from "styled-components";
-import { Theme } from "../theme/theme";
+import styled, { css, keyframes } from 'styled-components';
+import { Theme } from '../theme/theme';
 
 interface Picture {
   circle?: boolean;
@@ -21,7 +21,7 @@ export const DetailsWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  grid-gap: 20px;
+  grid-gap: 30px;
   max-width: 1000px;
   margin: 0 auto;
 
@@ -81,7 +81,7 @@ export const Picture = styled.img<Picture>`
   box-shadow: 0px 5px 20px ${({ theme }: { theme: Theme }) => theme.textColor};
   animation: ${showUp} 2s linear;
   transition: transform 0.2s ease-out;
-  border-radius: ${({ circle }) => (circle ? "50%" : "5%")};
+  border-radius: ${({ circle }) => (circle ? '50%' : '5%')};
   &:hover {
     transform: scale(1.05);
   }

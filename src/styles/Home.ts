@@ -1,13 +1,11 @@
-import styled, { css } from "styled-components";
-import { Theme } from "../theme/theme";
-
-// ? Hero Section Styling
+import styled, { css } from 'styled-components';
+import { Theme } from '../theme/theme';
 
 export const Hero = styled.section`
   height: 100vh;
   width: 100%;
   margin-top: 110px;
-  background: url("/public/bobafett-bg.png");
+  background: url('/public/bobafett-bg.png');
   background-position: 30%;
   background-size: cover;
   -webkit-background-size: cover;
@@ -57,8 +55,6 @@ export const Headliner = styled.h1`
     font-size: 60px;
   }
 `;
-
-// ? Columns Section Styling
 
 export const ColumnSection = styled.section`
   margin: 50px 0;

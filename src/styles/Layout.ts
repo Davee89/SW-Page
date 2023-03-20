@@ -1,6 +1,6 @@
-import { NavLink } from "react-router-dom";
-import styled from "styled-components";
-import { Theme } from "../theme/theme";
+import { NavLink } from 'react-router-dom';
+import styled from 'styled-components';
+import { Theme } from '../theme/theme';
 
 export const MainContent = styled.main`
   margin: auto;
@@ -30,10 +30,32 @@ export const Logo = styled.img`
   cursor: pointer;
 `;
 
-export const Nav = styled.ul`
+export const Nav = styled.div<{ isOpen: boolean }>`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 60px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+
+  @media (max-width: 900px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100vh;
+    width: 100%;
+    gap: 30px;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transform: ${({ isOpen }) => (isOpen ? 'translateX(100%)' : 'translateX(-100%)')};
+    z-index: 30;
+    background-color: ${({ isOpen }) => (isOpen ? 'rgba(0,0,0,0.6)' : 'transparent')};
+    backdrop-filter: blur(5px);
+    padding: 140px 0;
+    transition: all 0.5s ease-in-out;
+  }
 `;
 
 export const NavigationLink = styled(NavLink)`

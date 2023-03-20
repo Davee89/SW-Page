@@ -1,9 +1,10 @@
-import { createContext, ReactNode, useState } from "react";
-import { darkTheme, lightTheme, Theme } from "../theme/theme";
+import { createContext, ReactNode, useState } from 'react';
+import { darkTheme, lightTheme, Theme } from '../theme/theme';
 
 interface State {
   theme: Theme;
   toggleTheme: () => void;
+  darkSide: boolean;
 }
 
 interface ProviderProps {
@@ -13,6 +14,7 @@ interface ProviderProps {
 export const DarkSideContext = createContext<State>({
   theme: lightTheme,
   toggleTheme: () => null,
+  darkSide: false,
 });
 
 export const DarkSideProvider = ({ children }: ProviderProps) => {
@@ -25,6 +27,7 @@ export const DarkSideProvider = ({ children }: ProviderProps) => {
   const value = {
     theme,
     toggleTheme,
+    darkSide,
   };
   return <DarkSideContext.Provider value={value}>{children}</DarkSideContext.Provider>;
 };
